@@ -89,7 +89,8 @@ public class CheckUpdate {
         queue.add(jsonObjectRequest);
     }
 
-    public void setResponseVersion(double response) {
+    public void setResponseVersion(double response)
+    {
         this.responseVersion = response;
     }
 
@@ -99,6 +100,7 @@ public class CheckUpdate {
             PackageInfo info = manager.getPackageInfo(context.getPackageName(),
                     PackageManager.GET_ACTIVITIES);
             currentAppVersion = (double) info.versionCode;
+            currentAppVersion = 0;
 
         } catch (Exception e) {
             System.out.println(e.toString());

@@ -12,7 +12,7 @@ public class DownloadReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
             System.out.println("Download COMPLETE");
-            //new InstallUpdate(context).install();
+            new InstallUpdate(context).install();
         }
     }
 }
